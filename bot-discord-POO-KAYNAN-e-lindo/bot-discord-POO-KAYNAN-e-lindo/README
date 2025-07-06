@@ -1,0 +1,73 @@
+🎶 Bot de Música para Discord
+
+Este é um bot desenvolvido em Python que permite tocar músicas no Discord a partir de links (ex: YouTube).
+O projeto utiliza a biblioteca discord.py, integração com yt_dlp e ffmpeg.
+
+Estrutura do Projeto
+
+bot/
+├── main.py
+├── bot_config.py
+├── logger.py
+├── core/
+│   ├── command_handler.py
+│   └── audio_manager.py
+├── music/
+│   ├── player.py
+│   ├── track.py
+│   ├── queue.py
+├── user/
+│   ├── user.py
+│   └── user_action.py
+├── base/
+│   ├── bot_entity.py
+│   └── audio_entity.py
+
+Pré-requisitos
+
+Antes de rodar o bot, é necessário instalar algumas bibliotecas e dependências:
+
+Linux
+
+1. Atualize e instale o ffmpeg (necessário para tocar áudio):
+
+   sudo apt update && sudo apt install -y ffmpeg
+
+2. Instale as bibliotecas Python:
+
+   pip install -r requirements.txt
+
+Se o arquivo requirements.txt não existir, crie um com o seguinte conteúdo:
+
+discord.py
+yt_dlp
+
+Configuração
+
+1. No arquivo bot_config.py, insira o token do seu bot:
+
+   TOKEN = "SEU_TOKEN_AQUI"
+
+Nunca compartilhe esse token publicamente.
+
+Como rodar
+
+Execute o arquivo main.py:
+
+   python main.py
+
+Você verá no terminal a mensagem confirmando que o bot está pronto.
+
+Comandos disponíveis
+
+- !kay: Bot entra no canal de voz onde você está.
+- !sai: Bot sai do canal de voz.
+- !toca <URL>: Toca a música a partir do link (YouTube, etc).
+
+Problemas comuns
+
+- "Opus não carregado": Certifique-se de que libopus está instalado corretamente no sistema.
+- "ffmpeg não encontrado": Verifique se a instalação foi feita e o comando ffmpeg funciona no terminal.
+"""
+
+
