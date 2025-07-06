@@ -1,0 +1,13 @@
+python --version
+python -m ensurepip --upgrade
+python get-pip.py
+sudo apt update
+sudo apt install python3-pip
+brew install python3
+pip --version
+discord.py>=2.3.2
+yt-dlp>=2024.4.9
+pytube>=15.0.0
+aiohttp>=3.9.5
+async-timeout>=4.0.3
+python-dotenv>=1.0.1
